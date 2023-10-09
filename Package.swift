@@ -16,18 +16,18 @@ let package = Package(
     targets: [
 //         .systemLibrary(name: "PilotObjC", path: "Sources/PilotIOS"),
         .binaryTarget(name: "PilotObjC", path: "libs/PilotCDN.xcframework"),
-        .target(
-             name: "PilotIOS",
-             dependencies: ["PilotObjC"]
-//            ,
-//             cSettings: [
-//                 .headerSearchPath("include"),
-//             ]
-            //  ,
-            //  linkerSettings: [
-            //      .linkedLibrary("lib/linPilotCDN.a"),
-            //  ]
-         )
+//        .target(
+//             name: "PilotIOS",
+//             dependencies: ["PilotObjC"]
+////            ,
+////             cSettings: [
+////                 .headerSearchPath("include"),
+////             ]
+//            //  ,
+//            //  linkerSettings: [
+//            //      .linkedLibrary("lib/linPilotCDN.a"),
+//            //  ]
+//         )
 //        ,
 //        .testTarget(
 //            name: "PilotIOSTests",
