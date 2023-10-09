@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "PilotIOS",
+            type: .dynamic,
             targets: ["PilotIOS"]),
     ],
     dependencies: [],
@@ -21,7 +22,7 @@ let package = Package(
              ]
             //  ,
             //  linkerSettings: [
-            //      .linkedLibrary("lib/libPilotCDN.a"),
+            //      .linkedLibrary("lib/linPilotCDN.a"),
             //  ]
          ),
         .testTarget(
