@@ -5,21 +5,24 @@ import PackageDescription
 
 let package = Package(
     name: "PilotIOS",
+    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: "PilotIOS",
             type: .dynamic,
-            targets: ["PilotIOS"]),
+            targets: ["PilotObjC", "PilotIOS"]),
     ],
     dependencies: [],
     targets: [
-         .systemLibrary(name: "PilotObjC", path: "Sources/PilotIOS"),
-         .target(
+//         .systemLibrary(name: "PilotObjC", path: "Sources/PilotIOS"),
+        .binaryTarget(name: "PilotObjC", path: "libs/PilotCDN.xcframework"),
+        .target(
              name: "PilotIOS",
-             dependencies: ["PilotObjC"],
-             cSettings: [
-                 .headerSearchPath("include"),
-             ]
+             dependencies: ["PilotObjC"]
+//            ,
+//             cSettings: [
+//                 .headerSearchPath("include"),
+//             ]
             //  ,
             //  linkerSettings: [
             //      .linkedLibrary("lib/linPilotCDN.a"),

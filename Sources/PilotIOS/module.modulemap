@@ -1,5 +1,0 @@
-module PilotIOS [system] {
-  header "include/OTT-Bridging-Header.h"
-  link "lib/libPilotCDN.a"
-  export *
-}
