@@ -9,20 +9,18 @@ let package = Package(
     products: [
         .library(
             name: "PilotIOS",
-//            type: .static,
-            targets: ["PilotObjC"]),
+            type: .dynamic,
+            targets: ["PilotIOS"]),
     ],
     dependencies: [],
     targets: [
-//         .systemLibrary(name: "PilotObjC", path: "Sources/PilotIOS"),
         .binaryTarget(name: "PilotObjC", path: "libs/PilotCDN.xcframework"),
-       .target(
-            name: "PilotIOS"
-            // dependencies: ["PilotObjC"]
-//            ,
-//             cSettings: [
-//                 .headerSearchPath("include"),
-//             ]
+        .target(
+            name: "PilotIOS",
+            dependencies: ["PilotObjC"],
+            cSettings: [
+                .headerSearchPath("include")
+            ]
            //  ,
            //  linkerSettings: [
            //      .linkedLibrary("lib/linPilotCDN.a"),
