@@ -10,7 +10,7 @@ let package = Package(
         .library(
             name: "PilotIOS",
             type: .dynamic,
-            targets: ["PilotObjC", "PilotIOS"]),
+            targets: ["PilotObjC"]),
     ],
     dependencies: [],
     targets: [
