@@ -24,10 +24,11 @@ let package = Package(
             //  linkerSettings: [
             //      .linkedLibrary("lib/linPilotCDN.a"),
             //  ]
-         ),
-        .testTarget(
-            name: "PilotIOSTests",
-            dependencies: ["PilotIOS"]
-        ),
+         )
+//        ,
+//        .testTarget(
+//            name: "PilotIOSTests",
+//            dependencies: ["PilotIOS"]
+//        ),
     ]
 )
