@@ -6,23 +6,27 @@ import PackageDescription
 let package = Package(
     name: "PilotIOS",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "PilotIOS",
             targets: ["PilotIOS"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "PilotIOS",
-            dependencies: []),
+         .systemLibrary(name: "PilotObjC", path: "Sources/PilotIOS"),
+         .target(
+             name: "PilotIOS",
+             dependencies: ["PilotObjC"],
+             cSettings: [
+                 .headerSearchPath("include"),
+             ]
+            //  ,
+            //  linkerSettings: [
+            //      .linkedLibrary("lib/libPilotCDN.a"),
+            //  ]
+         ),
         .testTarget(
             name: "PilotIOSTests",
-            dependencies: ["PilotIOS"]),
+            dependencies: ["PilotIOS"]
+        ),
     ]
 )

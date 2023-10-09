@@ -1,0 +1,5 @@
+module PilotIOS [system] {
+  header "./include/PilotIOS-Bridging-Header.h"
+  link "./lib/libPilotCDN.a"
+  export *
+}
