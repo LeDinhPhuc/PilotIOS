@@ -10,7 +10,8 @@ let package = Package(
         .library(
             name: "PilotIOS",
             type: .dynamic,
-            targets: ["PilotIOS", "PilotCDN"]),
+            targets: ["PilotIOS", "PilotCDN"]
+        ),
     ],
     dependencies: [],
     targets: [
@@ -20,13 +21,7 @@ let package = Package(
         ),
         .target(
             name: "PilotIOS",
-            dependencies: ["PilotCDN"],
-            cSettings: [
-                .headerSearchPath("include")
-            ]
-//            linkerSettings: [
-//                .linkedLibrary("lib/linPilotCDN.a"),
-//            ]
+            dependencies: ["PilotCDN"]
         )
 //        ,
 //        .testTarget(
