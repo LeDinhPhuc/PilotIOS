@@ -10,21 +10,23 @@ let package = Package(
         .library(
             name: "PilotIOS",
             type: .dynamic,
-            targets: ["PilotIOS"]),
+            targets: ["PilotIOS", "PilotCDN"]),
     ],
     dependencies: [],
     targets: [
-        .binaryTarget(name: "PilotObjC", path: "libs/PilotCDN.xcframework"),
+        .binaryTarget(
+            name: "PilotCDN",
+            path: "xcframeworks/PilotCDN.xcframework"
+        ),
         .target(
             name: "PilotIOS",
-            dependencies: ["PilotObjC"],
+            dependencies: ["PilotCDN"],
             cSettings: [
                 .headerSearchPath("include")
             ]
-           //  ,
-           //  linkerSettings: [
-           //      .linkedLibrary("lib/linPilotCDN.a"),
-           //  ]
+//            linkerSettings: [
+//                .linkedLibrary("lib/linPilotCDN.a"),
+//            ]
         )
 //        ,
 //        .testTarget(

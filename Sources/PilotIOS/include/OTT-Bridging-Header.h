@@ -8,6 +8,6 @@
 #ifndef PilotIOS-Bridging-Header_h
 #define PilotIOS-Bridging-Header_h
 
-#import "./OTT.h"
+#import "OTT.h"
 
 #endif /* PilotIOS-Bridging-Header_h */
