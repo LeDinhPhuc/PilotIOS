@@ -22,10 +22,5 @@ let package = Package(
             name: "PilotIOS",
             dependencies: ["PilotCDN"]
         )
-//        ,
-//        .testTarget(
-//            name: "PilotIOSTests",
-//            dependencies: ["PilotIOS"]
-//        ),
     ]
 )
