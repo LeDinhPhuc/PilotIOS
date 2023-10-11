@@ -6,4 +6,4 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PilotCDNBridge.h"
+#import "PilotCDNBridge-Bridging-Header.h"

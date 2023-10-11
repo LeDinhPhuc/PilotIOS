@@ -8,8 +8,8 @@ let package = Package(
     platforms: [.iOS(.v9)],
     products: [
         .library(
-            name: "PilotCDN",
-            targets: ["PilotCDN"]),
+            name: "PilotIOS",
+            targets: ["PilotIOS"]),
     ],
     dependencies: [],
     targets: [
@@ -23,9 +23,9 @@ let package = Package(
             path: "Sources/PilotCDNBridge"
         ),
         .target(
-            name: "PilotCDN",
+            name: "PilotIOS",
             dependencies: ["PilotCDNBridge"],
-            path: "Sources/PilotCDN"
+            path: "Sources/PilotIOS"
         )
     ]
 )
