@@ -9,18 +9,18 @@ let package = Package(
     products: [
         .library(
             name: "PilotIOS",
-            type: .dynamic,
-            targets: ["PilotIOS", "PilotCDN"]),
+//            type: .dynamic,
+            targets: ["PilotIOS", "PilotFramework"]),
     ],
     dependencies: [],
     targets: [
         .binaryTarget(
-            name: "PilotCDN",
+            name: "PilotFramework",
             path: "xcframeworks/PilotCDN.xcframework"
         ),
         .target(
             name: "PilotIOS",
-            dependencies: ["PilotCDN"]
+            dependencies: ["PilotFramework"]
         )
     ]
 )
