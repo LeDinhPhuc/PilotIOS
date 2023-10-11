@@ -8,6 +8,6 @@
 #ifndef PilotCDN_Bridging_Header_h
 #define PilotCDN_Bridging_Header_h
 
-#import "OTT.h"
+#import "PilotCDN/OTT.h"
 
 #endif /* PilotCDN_Bridging_Header_h */
