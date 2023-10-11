@@ -20,10 +20,11 @@ let package = Package(
         ),
         .target(
             name: "PilotIOS",
-            dependencies: ["PilotCDN"],
-            cSettings: [
-                .headerSearchPath("include")
-            ]
+            dependencies: ["PilotCDN"]
+//            ,
+//            cSettings: [
+//                .headerSearchPath("include")
+//            ]
         )
     ]
 )
