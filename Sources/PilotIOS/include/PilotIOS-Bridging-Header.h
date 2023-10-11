@@ -8,6 +8,6 @@
 #ifndef Header_h
 #define Header_h
 
-#import "PilotCDN/OTT.h"
+#import "OTT.h"
 
 #endif /* Header_h */
