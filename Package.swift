@@ -8,23 +8,23 @@ let package = Package(
     platforms: [.iOS(.v9)],
     products: [
         .library(
-            name: "PilotIOS",
+            name: "PilotCDN",
             type: .dynamic,
-            targets: ["PilotIOS", "PilotCDN"]),
+            targets: ["PilotCDN"]),
     ],
     dependencies: [],
     targets: [
         .binaryTarget(
-            name: "PilotCDN",
+            name: "PilotCDNObjC",
             path: "xcframeworks/PilotCDN.xcframework"
         ),
         .target(
-            name: "PilotIOS",
-            dependencies: ["PilotCDN"]
-//            ,
-//            cSettings: [
-//                .headerSearchPath("include")
-//            ]
+            name: "PilotCDNBridge",
+            dependencies: ["PilotCDNObjC"]
+        ),
+        .target(
+            name: "PilotCDN",
+            dependencies: ["PilotCDNBridge"]
         )
     ]
 )
