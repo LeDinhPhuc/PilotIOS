@@ -9,7 +9,6 @@ let package = Package(
     products: [
         .library(
             name: "PilotCDN",
-            type: .dynamic,
             targets: ["PilotCDN"]),
     ],
     dependencies: [],
@@ -20,11 +19,13 @@ let package = Package(
         ),
         .target(
             name: "PilotCDNBridge",
-            dependencies: ["PilotCDNObjC"]
+            dependencies: ["PilotCDNObjC"],
+            path: "Sources/PilotCDNBridge"
         ),
         .target(
             name: "PilotCDN",
-            dependencies: ["PilotCDNBridge"]
+            dependencies: ["PilotCDNBridge"],
+            path: "Sources/PilotCDN"
         )
     ]
 )
