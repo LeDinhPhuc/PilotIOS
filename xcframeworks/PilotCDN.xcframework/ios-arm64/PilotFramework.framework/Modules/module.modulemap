@@ -1,6 +1,0 @@
-framework module PilotFramework {
-  umbrella header "PilotFramework.h"
-
-  export *
-  module * { export * }
-}
