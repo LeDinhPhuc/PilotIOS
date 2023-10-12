@@ -19,6 +19,6 @@ let package = Package(
         ),
         .target(
             name: "PilotIOS"
-        )
+        ),
     ]
 )
